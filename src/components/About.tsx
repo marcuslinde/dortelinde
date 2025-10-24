@@ -20,7 +20,7 @@ export function About() {
             />
           </div>
           <div className="space-y-6">
-            <h2>Om Mig</h2>
+            <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Om Mig</h2>
             <p className="text-muted-foreground">
               Som mor til tre neurodivergente børn og tidligere børneministerleder forstår jeg både udfordringerne og de utrolige velsignelser, der kommer med at skabe inkluderende trossamfund. I over et årti har jeg hjulpet kirker, kristne skoler og trosbaserede organisationer med at omfavne neurodiversitet med nåde og praktisk visdom.
             </p>

@@ -10,14 +10,14 @@ export function Footer({ onPrivacyClick }: FooterProps) {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3>Dorte Linde</h3>
+            <h3 className="text-2xl font-heading font-bold tracking-tight mb-2">Dorte Linde</h3>
             <p className="mt-4 opacity-80">
               Neurodiverse Specialist & Forfatter
             </p>
           </div>
 
           <div>
-            <h4>Kontakt</h4>
+            <h4 className="text-lg font-heading font-semibold tracking-tight mb-2">Kontakt</h4>
             <div className="mt-4 space-y-2 opacity-80">
               <p>Email: dorte@allevelkomne.dk</p>
               <p>Telefon: +45 12 34 56 78</p>
@@ -25,7 +25,7 @@ export function Footer({ onPrivacyClick }: FooterProps) {
           </div>
 
           <div>
-            <h4>Forbind</h4>
+            <h4 className="text-lg font-heading font-semibold tracking-tight mb-2">Forbind</h4>
             <div className="mt-4 flex gap-4">
               {[
                 { icon: Facebook, label: 'Facebook' },

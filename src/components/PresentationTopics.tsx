@@ -30,7 +30,7 @@ export function PresentationTopics() {
       
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-12">
-          <h2>Præsentationer & Workshops</h2>
+          <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Præsentationer & Workshops</h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
             Hver præsentation er skræddersyet til din kirkes eller organisations unikke kontekst og behov. Her er nogle af mine mest efterspurgte emner:
           </p>
@@ -39,7 +39,7 @@ export function PresentationTopics() {
           {topics.map(({ Icon, title, description, duration }, index) => (
             <Card key={index} className="group hover:-translate-y-2 h-full hover:border-primary/30 transition-all duration-300">
               <CardHeader>
-                <div className={`w-14 h-14 ${index % 2 === 0 ? 'rounded-blob' : 'rounded-blob-2'} bg-primary/10 flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary/20`}>
+                <div className={`w-14 h-14 ${index % 2 === 0 ? 'rounded-blob' : 'rounded-blob-2'} flex items-center justify-center mb-4 border border-primary transition-all duration-300 group-hover:scale-110`}>
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <CardTitle>{title}</CardTitle>

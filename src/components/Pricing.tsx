@@ -62,7 +62,7 @@ export function Pricing() {
       
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
-          <h2>Tale & Træningspakker</h2>
+          <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Tale & Træningspakker</h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
             Hver kirkes rejse mod inklusion er unik. Vælg den pakke, der passer til dit samfunds behov og budget.
           </p>

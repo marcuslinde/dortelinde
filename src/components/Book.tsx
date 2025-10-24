@@ -16,10 +16,10 @@ export function Book({ imageUrl }: BookProps) {
       <div className="max-w-6xl mx-auto relative">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 space-y-6">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+            <div className="inline-flex items-center gap-2 px-4 py-2 border border-primary rounded-blob transition-all duration-300 hover:scale-110">
               <span className="text-primary">Bestseller Bog</span>
             </div>
-            <h2>Alle Er Velkomne: Skabelse af Neurodiverse-Venlige Kirker</h2>
+            <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Alle Er Velkomne: Skabelse af Neurodiverse-Venlige Kirker</h2>
             <p className="text-muted-foreground">
               En omfattende guide for kirkeledere, ministerielle frivillige og kristne undervisere, der ønsker at skabe virkelig inkluderende miljøer, hvor neurodivergente børn kan møde Guds kærlighed og vokse i deres tro.
             </p>

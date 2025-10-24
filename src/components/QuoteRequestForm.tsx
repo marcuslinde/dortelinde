@@ -50,7 +50,7 @@ export function QuoteRequestForm() {
       
       <div className="max-w-3xl mx-auto relative">
         <div className="text-center mb-12">
-          <h2>Anmod om Tilbud</h2>
+          <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Anmod om Tilbud</h2>
           <p className="text-muted-foreground mt-4">
             Udfyld formularen nedenfor, og jeg vender tilbage inden for 24 timer for at diskutere dine event behov.
           </p>

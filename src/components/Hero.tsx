@@ -9,14 +9,13 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ backgroundColor: '#d0e9d5' }}>
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ backgroundColor: 'var(--hero-bg)' }}>
       {/* Mobile background image */}
       <div className="absolute inset-0 lg:hidden">
         <ImageWithFallback
           src={imageSrc}
           alt="Dorte Linde på scenen"
-          className="w-full h-full object-cover opacity-15"
-          style={{ transform: 'scale(1.5)', transformOrigin: 'center' }} // Adjusted for zoom effect
+          className="w-full h-full object-cover opacity-15 scale-150 origin-center"
         />
       </div>
 
@@ -28,10 +27,10 @@ export function Hero() {
           <div className="max-w-xl space-y-8 text-center lg:text-left">
             {/* Main heading */}
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl lg:text-foreground text-white" style={{ letterSpacing: '-0.05em' }}>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl lg:text-foreground font-heading font-medium" style={{ color: 'var(--hero-text)', letterSpacing: '-0.05em' }}>
                 Dorte Linde
               </h1>
-              <p className="text-xl md:text-2xl lg:text-muted-foreground text-white/95">
+              <p className="text-xl md:text-2xl lg:text-muted-foreground font-heading font-medium" style={{ color: 'var(--hero-text)' }}>
                 Hjælper kristne fællesskaber med at skabe inkluderende rum, hvor neurodivergente børn kan blomstre
               </p>
             </div>
@@ -59,10 +58,12 @@ export function Hero() {
             <div className="flex flex-col md:flex-row md:flex-wrap items-center gap-6 pt-8 text-sm justify-center lg:justify-start">
               {['150+ kirker trænet', 'Bestseller forfatter', '10+ års erfaring'].map((text, i) => (
                 <div key={text} className="flex items-center gap-2">
-                  <div className={`w-8 h-8 ${i % 2 === 0 ? 'rounded-blob' : 'rounded-blob-2'} lg:bg-primary/10 bg-white/20 flex items-center justify-center`}>
-                    <span className="lg:text-primary text-white">✓</span>
+                  <div className={`w-8 h-8 ${i % 2 === 0 ? 'rounded-blob' : 'rounded-blob-2'} flex items-center justify-center`} style={{ 
+                    backgroundColor: `var(--hero-trust-${window.matchMedia('(min-width: 1024px)').matches ? 'bg-desktop' : 'bg-mobile'})`
+                  }}>
+                    <span className="lg:text-primary" style={{ color: 'var(--hero-text)' }}>✓</span>
                   </div>
-                  <span className="lg:text-muted-foreground text-white/90">{text}</span>
+                  <span className="lg:text-muted-foreground" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>{text}</span>
                 </div>
               ))}
             </div>
@@ -74,8 +75,12 @@ export function Hero() {
           {/* Decorative blob background */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div 
-              className="w-[85%] h-[85%] bg-primary/10 rounded-blob animate-wobble"
-              style={{ maxWidth: '600px', maxHeight: '700px' }}
+              className="w-[85%] h-[85%] rounded-blob animate-wobble"
+              style={{ 
+                backgroundColor: 'var(--hero-blob-bg)',
+                maxWidth: '600px',
+                maxHeight: '700px'
+              }}
             ></div>
           </div>
           
