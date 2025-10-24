@@ -1,0 +1,101 @@
+import { Button } from "./ui/button";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+
+const imageSrc = "/images/billede2.jpeg";
+
+export function Hero() {
+  const scrollToForm = () => {
+    document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ backgroundColor: '#d0e9d5' }}>
+      {/* Mobile background image */}
+      <div className="absolute inset-0 lg:hidden">
+        <ImageWithFallback
+          src={imageSrc}
+          alt="Dorte Linde på scenen"
+          className="w-full h-full object-cover opacity-15"
+          style={{ transform: 'scale(1.5)', transformOrigin: 'center' }} // Adjusted for zoom effect
+        />
+      </div>
+
+      {/* Split layout container */}
+      <div className="w-full grid lg:grid-cols-2 gap-0 items-center">
+        
+        {/* Left side - Content (centered) */}
+        <div className="relative z-10 px-6 py-20 lg:py-32 flex items-center justify-center">
+          <div className="max-w-xl space-y-8 text-center lg:text-left">
+            {/* Main heading */}
+            <div className="space-y-4">
+              <h1 className="text-6xl md:text-7xl lg:text-8xl lg:text-foreground text-white" style={{ letterSpacing: '-0.05em' }}>
+                Dorte Linde
+              </h1>
+              <p className="text-xl md:text-2xl lg:text-muted-foreground text-white/95">
+                Hjælper kristne fællesskaber med at skabe inkluderende rum, hvor neurodivergente børn kan blomstre
+              </p>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
+              <Button 
+                onClick={scrollToForm}
+                size="lg"
+                className="px-10 py-6 hover:scale-105 transition-all duration-300"
+              >
+                Anmod om Tilbud
+              </Button>
+              <Button 
+                variant="outline"
+                size="lg"
+                className="px-10 py-6 hover:scale-105 transition-all duration-300"
+                onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Lær Mere
+              </Button>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-col md:flex-row md:flex-wrap items-center gap-6 pt-8 text-sm justify-center lg:justify-start">
+              {['150+ kirker trænet', 'Bestseller forfatter', '10+ års erfaring'].map((text, i) => (
+                <div key={text} className="flex items-center gap-2">
+                  <div className={`w-8 h-8 ${i % 2 === 0 ? 'rounded-blob' : 'rounded-blob-2'} lg:bg-primary/10 bg-white/20 flex items-center justify-center`}>
+                    <span className="lg:text-primary text-white">✓</span>
+                  </div>
+                  <span className="lg:text-muted-foreground text-white/90">{text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right side - Image in blob shape (Desktop only) */}
+        <div className="relative h-[60vh] lg:h-[90vh] items-center justify-center hidden lg:flex">
+          {/* Decorative blob background */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div 
+              className="w-[85%] h-[85%] bg-primary/10 rounded-blob wobble"
+              style={{ maxWidth: '600px', maxHeight: '700px' }}
+            ></div>
+          </div>
+          
+          {/* Image container with blob shape */}
+          <div 
+            className="relative w-[75%] h-[75%] overflow-hidden rounded-blob-2"
+            style={{ maxWidth: '500px', maxHeight: '600px' }}
+          >
+            <ImageWithFallback
+              src={imageSrc}
+              alt="Dorte Linde på scenen"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Decorative floating elements */}
+          <div className="absolute top-12 left-12 w-20 h-20 border-4 border-accent rounded-blob-2 float"></div>
+          <div className="absolute bottom-20 right-16 w-16 h-16 bg-secondary rounded-blob wobble"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
