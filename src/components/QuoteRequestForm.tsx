@@ -4,7 +4,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 export function QuoteRequestForm() {
   const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ export function QuoteRequestForm() {
   return (
     <section id="quote-form" className="py-20 px-6 bg-background relative overflow-hidden">
       {/* Playful background blob */}
-      <div className="absolute -top-20 right-10 w-[450px] h-[450px] bg-secondary rounded-blob-2 float opacity-80"></div>
+      <div className="absolute -top-20 right-10 w-[450px] h-[450px] bg-secondary rounded-blob-2 animate-float opacity-80"></div>
       
       <div className="max-w-3xl mx-auto relative">
         <div className="text-center mb-12">

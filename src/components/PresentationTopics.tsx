@@ -26,7 +26,7 @@ export function PresentationTopics() {
   return (
     <section id="topics" className="py-20 px-6 bg-secondary relative overflow-hidden">
       {/* Playful background blob */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/15 rounded-blob float"></div>
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/15 rounded-blob animate-float"></div>
       
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-12">

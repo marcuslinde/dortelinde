@@ -10,7 +10,7 @@ export function Book({ imageUrl }: BookProps) {
   return (
     <section id="book" className="py-20 px-6 bg-secondary relative overflow-hidden">
       {/* Playful background shapes */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-blob float"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-blob animate-float"></div>
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/30 rounded-blob-2"></div>
       
       <div className="max-w-6xl mx-auto relative">

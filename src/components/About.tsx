@@ -8,7 +8,7 @@ export function About() {
     <section className="py-20 px-6 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-secondary/30 rounded-blob-2 -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/40 rounded-blob float"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/40 rounded-blob animate-float"></div>
       
       <div className="max-w-6xl mx-auto relative">
         <div className="grid md:grid-cols-2 gap-12 items-center">

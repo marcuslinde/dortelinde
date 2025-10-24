@@ -74,7 +74,7 @@ export function Hero() {
           {/* Decorative blob background */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div 
-              className="w-[85%] h-[85%] bg-primary/10 rounded-blob wobble"
+              className="w-[85%] h-[85%] bg-primary/10 rounded-blob animate-wobble"
               style={{ maxWidth: '600px', maxHeight: '700px' }}
             ></div>
           </div>
@@ -92,8 +92,8 @@ export function Hero() {
           </div>
 
           {/* Decorative floating elements */}
-          <div className="absolute top-12 left-12 w-20 h-20 border-4 border-accent rounded-blob-2 float"></div>
-          <div className="absolute bottom-20 right-16 w-16 h-16 bg-secondary rounded-blob wobble"></div>
+          <div className="absolute top-12 left-12 w-20 h-20 border-4 border-accent rounded-blob-2 animate-float"></div>
+          <div className="absolute bottom-20 right-16 w-16 h-16 bg-secondary rounded-blob animate-wobble"></div>
         </div>
       </div>
     </section>

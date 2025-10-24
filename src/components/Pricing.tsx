@@ -57,8 +57,8 @@ export function Pricing() {
   return (
     <section id="pricing" className="py-20 px-6 bg-background overflow-hidden relative">
       {/* Playful background blobs */}
-      <div className="absolute top-10 right-10 w-[500px] h-[500px] bg-accent rounded-blob-2 wobble opacity-60"></div>
-      <div className="absolute bottom-10 -left-32 w-[400px] h-[400px] bg-primary/20 rounded-blob float opacity-70"></div>
+      <div className="absolute top-10 right-10 w-[500px] h-[500px] bg-accent rounded-blob-2 animate-wobble opacity-60"></div>
+      <div className="absolute bottom-10 -left-32 w-[400px] h-[400px] bg-primary/20 rounded-blob animate-float opacity-70"></div>
       
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
@@ -70,7 +70,7 @@ export function Pricing() {
         
         <div className="grid md:grid-cols-3 gap-8 items-start">
           {pricingTiers.map((tier) => (
-            <Card key={tier.name} className={`relative h-full hover:scale-105 transition-all duration-300 ${tier.popular ? 'border-primary border-2' : ''}`}>
+            <Card key={tier.name} className={`relative flex flex-col h-full hover:scale-105 transition-all duration-300 ${tier.popular ? 'border-primary border-2' : ''}`}>
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full">
                   Mest Populær
@@ -83,7 +83,7 @@ export function Pricing() {
                 </div>
                 <CardDescription>{tier.description}</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="flex flex-col flex-1 justify-between space-y-6">
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
@@ -94,7 +94,7 @@ export function Pricing() {
                 </ul>
                 <Button 
                   onClick={scrollToForm}
-                  className="w-full"
+                  className="w-full mt-auto"
                   variant={tier.popular ? "default" : "outline"}
                 >
                   Anmod om Tilbud
