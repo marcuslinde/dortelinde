@@ -18,7 +18,7 @@
     --background: #F9F9F9;
     --foreground: #333333;
 
-    --card: #F9F9F9;
+    --card: #ffffff;
     --card-foreground: #333333;
  
     --popover: #F9F9F9;
@@ -32,7 +32,7 @@
     --hero-text: #FFFFFF;
     --hero-trust-bg-mobile: rgb(255 255 255 / 0.2);
     --hero-trust-bg-desktop: rgb(17 122 139 / 0.1);
-    --hero-blob-bg: rgb(17 122 139 / 0.1);
+    --hero-blob-bg: rgba(255, 255, 255, 0.2);
  
     --secondary: #D7EFF2;
     --secondary-foreground: #333333;

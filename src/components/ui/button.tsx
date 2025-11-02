@@ -11,19 +11,18 @@ const buttonVariants = cva(
   variant: {
     /* Primary – Soft Gold */
     default:
-      "bg-accent text-accent-foreground hover:bg-[#C29B55] transition-colors",
-
-    /* Destructive (keep unchanged or adjust if you use it) */
+      "bg-accent text-accent-foreground hover:bg-[#C5A35F] transition-colors",
+      
+    /* Secondary – white background */
+    secondary:
+      "bg-hero-text text-accent-foreground hover:bg-[#EAF7F9] transition-colors",
+    
+    cards:
+      "bg-[#EAF7F9] text-accent-foreground hover:bg-[#d4ebef] transition-colors",
+      
+    /* Destructive (keep unchanged or adjust if you use it) */  
     destructive:
       "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-
-    /* Outline – Gold border + teal hover */
-    outline:
-      "border border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors",
-
-    /* Secondary – Teal background */
-    secondary:
-      "bg-primary text-primary-foreground hover:bg-[#0E6676] transition-colors",
 
     /* Ghost – subtle hover effect using gold tint */
     ghost:

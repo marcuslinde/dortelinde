@@ -9,7 +9,7 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden" style={{ backgroundColor: 'var(--hero-bg)' }}>
+    <section id="hero" className="relative min-h-[95vh] flex items-center overflow-hidden" style={{ backgroundColor: 'var(--hero-bg)' }}>
       {/* Mobile background image */}
       <div className="absolute inset-0 lg:hidden">
         <ImageWithFallback
@@ -45,7 +45,7 @@ export function Hero() {
                 Anmod om Tilbud
               </Button>
               <Button 
-                variant="outline"
+                variant="secondary"
                 size="lg"
                 className="px-10 py-6 hover:scale-105 transition-all duration-300"
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
@@ -75,7 +75,7 @@ export function Hero() {
           {/* Decorative blob background */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div 
-              className="w-[85%] h-[85%] rounded-blob animate-wobble"
+              className="w-[85%] h-[85%] rounded-blob animate-morphSlow"
               style={{ 
                 backgroundColor: 'var(--hero-blob-bg)',
                 maxWidth: '600px',
@@ -98,7 +98,7 @@ export function Hero() {
 
           {/* Decorative floating elements */}
           <div className="absolute top-12 left-12 w-20 h-20 border-4 border-accent rounded-blob-2 animate-float"></div>
-          <div className="absolute bottom-20 right-16 w-16 h-16 bg-secondary rounded-blob animate-wobble"></div>
+          <div className="absolute bottom-20 right-16 w-16 h-16 bg-secondary rounded-blob animate-drift"></div>
         </div>
       </div>
     </section>

@@ -29,12 +29,10 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b-2 border-primary/20">
-      {/* Playful decorative blob on navbar */}
       <div className="absolute top-0 right-1/4 w-32 h-full bg-accent/30 rounded-blob -z-10 blur-2xl"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14">
-          {/* Logo with playful tilt */}
           <button
             onClick={() => scrollToSection("hero")}
             className="group flex items-center gap-2 hover:scale-105 transition-transform"
@@ -80,7 +78,7 @@ export function Navbar() {
             {/* CTA Button with sparkle */}
             <button
               onClick={() => scrollToSection("quote-form")}
-              className="ml-2 relative px-4 py-1.5 bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105 group overflow-hidden rounded-md"
+              className="ml-2 relative px-4 py-1.5 bg-accent text-accent-foreground hover:bg-accent/90 transition-all hover:scale-105 group overflow-hidden rounded-md"
               style={{
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '0.9375rem',

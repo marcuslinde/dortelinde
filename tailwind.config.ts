@@ -29,21 +29,28 @@ const config: Config = {
           '66%': { borderRadius: '64% 36% 55% 45% / 45% 55% 45% 55%' },
           '100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' }
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' }
+        morphSlow: {
+          '0%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
+          '33%': { borderRadius: '48% 52% 45% 55% / 63% 37% 63% 37%' },
+          '66%': { borderRadius: '64% 36% 55% 45% / 45% 55% 45% 55%' },
+          '100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' }
         },
-        wobble: {
-          '0%, 100%': { transform: 'translateX(0) rotate(0)' },
-          '33%': { transform: 'translateX(-10px) rotate(-2deg)' },
-          '66%': { transform: 'translateX(10px) rotate(2deg)' }
-        }
+        float: {
+          'from': { transform: 'translateY(0px)' },
+          'to': { transform: 'translateY(-8px)' }
+        },
+        drift: {
+          '0%, 100%': { transform: 'translate(0, 0)' },
+          '50%': { transform: 'translate(8px, -4px)' }
+        },
       },
       animation: {
         morph: 'morph 8s ease-in-out infinite',
-        float: 'float 6s ease-in-out infinite',
-        wobble: 'wobble 6s ease-in-out infinite'
+        morphSlow: 'morph 20s ease-in-out infinite',
+        float: 'float 4s ease-in-out infinite alternate',
+        drift: 'drift 8s ease-in-out infinite'
       },
+      // ... (rest of your config is the same)
       colors: {
         border: "var(--border)",
         input: "var(--input)",
