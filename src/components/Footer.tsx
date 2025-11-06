@@ -6,7 +6,7 @@ interface FooterProps {
 
 export function Footer({ onPrivacyClick }: FooterProps) {
   return (
-    <footer className="bg-footer-bg text-primary-foreground py-12 px-6">
+    <footer className="bg-primary text-primary-foreground py-12 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
