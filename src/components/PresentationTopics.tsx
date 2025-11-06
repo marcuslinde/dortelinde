@@ -5,24 +5,21 @@ const topics = [
   // ... (din data er uændret)
   {
     Icon: Heart,
-    title: "Forstå & Inkludér",
-    description: "Et praksisnært oplæg, der giver en grundlæggende forståelse for børn med særlige behov (autisme, ADHD, angst mm.) og konkrete redskaber til at skabe et inkluderende fællesskab.",
-    duration: "45-60 min foredrag",
-    targetAudience: "Frivillige i børne- og ungdomsarbejde, fx kirker, klubber, foreninger og NGO'er." 
+    title: "Neurodiversitet i Fællesskabet",
+    description: "En grundlæggende indføring i autisme, ADHD og angst. Vi ser på, hvordan Gud værdsætter hvert barn, og hvorfor neurodiversitet beriger vores fællesskab.",
+    targetAudience: "Perfekt som en \"øjenåbner\" for hele kirken, frivillige og ledere." 
   },
   {
     Icon: Users,
-    title: "Trygge Rammer (Hands-on Workshop)",
-    description: "Her kombinerer vi teori og praksis. Du lærer, hvorfor børn reagerer som de gør, og får lov at teste teknikker og lave jeres egne 'fidget tools' og sanseredskaber.",
-    duration: "2 timers workshop",
-    targetAudience: "Frivillige i børnearbejde, spejderledere, klubmedarbejdere m.fl." 
+    title: "Praktiske Inklusionsstrategier",
+    description: "Konkrete 'hands-on' redskaber til at skabe imødekommende og tilgængelige miljøer for alle børn – fra visuelle hjælpemidler til at håndtere en 'nedsmeltning' med ro.",
+    targetAudience: "Alle frivillige, der arbejder direkte med børn i klubber, kirker og foreninger." 
   },
   {
     Icon: Church,
-    title: "Ro midt i Kaos (Aktiv Workshop)",
-    description: "Hvordan skaber man tryghed i et aktivt og uforudsigeligt miljø? Få redskaber til at skabe ro, struktur og mening, selv når der er fuld fart på i børneklubben eller kirken.",
-    duration: "90 min. skræddersyet workshop",
-    targetAudience: "Trænere, spejderledere og idrætsfrivillige, der arbejder med børn."
+    title: "Opbygning af en Inkluderende Kultur",
+    description: "For ledere og teams. Vi ser på, hvordan man skaber systemiske ændringer, byder familier med særlige behov velkommen og bygger en sund kultur fra bunden.",
+    targetAudience: "Præster, lederskabsteams, bestyrelser og nøglemedarbejdere."
   }
 ];
 
@@ -34,9 +31,9 @@ export function PresentationTopics() {
       
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Præsentationer & Workshops</h2>
+          <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Hvad kan jeg hjælpe jer med?</h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Intet fællesskab er ens. Derfor skræddersyr jeg altid mine oplæg og workshops til lige præcis jeres behov og kontek. Her er mine mest efterspurgte emner:
+            Mine oplæg tager altid udgangspunkt i jeres unikke behov. Her er de kerneemner, vi kan dykke ned i sammen. Alle emner kan leveres som en af pakkerne længere nede.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
