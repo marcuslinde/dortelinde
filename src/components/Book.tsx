@@ -1,6 +1,5 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-// RETTET: Importerer Newspaper i stedet for Star
 import { BookOpen, Newspaper } from "lucide-react";
 
 interface BookProps {
@@ -41,7 +40,6 @@ export function Book({ imageUrl }: BookProps) {
               ))}
             </div>
 
-            {/* TILFØJET: Artikel-link som "Social Proof" */}
             <div className="flex items-start gap-3 pt-2">
               <Newspaper className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
               <p className="text-muted-foreground">
@@ -58,7 +56,7 @@ export function Book({ imageUrl }: BookProps) {
             </div>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              {/* RETTET: Knappen er nu et link til bog-URL'en */}
+              {/* Knap 1: Er 'default' (guld) som i Hero. 'px-8' er bevaret. */}
               <Button size="lg" className="px-8" asChild>
                 <a 
                   href="https://www.eksistensen.dk/born-med-saerlige-behov-i-kirkeligt-bornearbejde.html" 
@@ -68,9 +66,11 @@ export function Book({ imageUrl }: BookProps) {
                   Køb Bogen
                 </a>
               </Button>
+              
+              {/* Knap 2: RETTET - 'variant="outline"' er ændret til 'variant="secondary"' */}
               <Button 
                 size="lg" 
-                variant="outline"
+                variant="secondary"
                 onClick={() => {
                   const formElement = document.getElementById('quote-form');
                   formElement?.scrollIntoView({ behavior: 'smooth' });

@@ -1,7 +1,7 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 // compute a runtime-safe URL for the image in the public folder
-const imageSrc = "/images/billede1.jpg";
+const imageSrc = "/images/bogsalg.jpeg";
 
 export function About() {
   return (

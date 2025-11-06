@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-const imageSrc = "/images/billede2.jpeg";
+const imageSrc = "/images/tale.jpeg";
 
 export function Hero() {
   const scrollToForm = () => {
@@ -55,17 +55,26 @@ export function Hero() {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-col md:flex-row md:flex-wrap items-center gap-6 pt-8 text-sm justify-center lg:justify-start">
-              {['150+ kirker trænet', 'Bestseller forfatter', '10+ års erfaring'].map((text, i) => (
-                <div key={text} className="flex items-center gap-2">
-                  <div className={`w-8 h-8 ${i % 2 === 0 ? 'rounded-blob' : 'rounded-blob-2'} flex items-center justify-center`} style={{ 
-                    backgroundColor: `var(--hero-trust-${window.matchMedia('(min-width: 1024px)').matches ? 'bg-desktop' : 'bg-mobile'})`
-                  }}>
-                    <span className="lg:text-primary" style={{ color: 'var(--hero-text)' }}>✓</span>
-                  </div>
-                  <span className="lg:text-muted-foreground" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>{text}</span>
+            {/* --- RETTELSE: Tilføjet 'items-center' --- */}
+            <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-6 pt-8 text-sm">
+            {['25 års erfaring', 'Træner kirker landet over', 'Anerkendt forfatter'].map((text) => (
+                <div key={text} className="flex items-center gap-2"> 
+                    <span className="
+                        flex 
+                        items-center 
+                        justify-center 
+                        w-8 
+                        h-8 
+                        bg-secondary 
+                        text-primary 
+                        rounded-blob
+                        flex-shrink-0
+                        ">
+                        ✓
+                    </span>
+                <span className="lg:text-muted-foreground" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>{text}</span>
                 </div>
-              ))}
+            ))}
             </div>
           </div>
         </div>
