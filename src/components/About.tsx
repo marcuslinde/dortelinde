@@ -7,8 +7,8 @@ export function About() {
   return (
     <section className="py-20 px-6 bg-background relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-secondary/30 rounded-blob-2 -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-accent/40 rounded-blob float"></div>
+      <div className="absolute top-20 left-10 w-64 h-64 bg-[#D7EFF2]/60 rounded-blob -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#D7EFF2]/60 rounded-blob-2 animate-float"></div>
       
       <div className="max-w-6xl mx-auto relative">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -20,24 +20,38 @@ export function About() {
             />
           </div>
           <div className="space-y-6">
-            <h2>Om Mig</h2>
+            <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Om Mig</h2>
             <p className="text-muted-foreground">
-              Som mor til tre neurodivergente børn og tidligere børneministerleder forstår jeg både udfordringerne og de utrolige velsignelser, der kommer med at skabe inkluderende trossamfund. I over et årti har jeg hjulpet kirker, kristne skoler og trosbaserede organisationer med at omfavne neurodiversitet med nåde og praktisk visdom.
+                <b>Jeg hedder Dorte, og jeg elsker mit arbejde 🩵</b>
+                <br />
+                I mere end 25 år har jeg hjulpet børn og unge med særlige behov, samt de voksne, der gerne vil gøre en forskel for dem. Jeg er læreruddannet med overbygning i specialpædagogik og tidligere leder af Fyns største børnekirke, hvor jeg opdagede hvor svært det kan være for frivillige at forstå børn, der reagerer anderledes.
             </p>
             <p className="text-muted-foreground">
-              Min rejse begyndte, da jeg indså, at vores kirke utilsigtet ekskluderede børn som mine. Dette førte til mange års forskning, træning og samarbejde med neurodivergente familier og ministerledere. Jeg tror, at hvert barn er skabt i Guds billede med unikke gaver at tilbyde Kristi legeme.
+                Mange vil gerne gøre det rigtige, men ender med at føle sig usikre når et barn trækker sig, får et vredesudbrud eller ikke kan følge med. Jeg kender den følelse. Derfor har jeg gjort det til min mission at give dit fællesskab enkle og brugbare redskaber, så du kan møde børnene med ro, forståelse og tryghed, også når du står midt i kaos.
             </p>
             <p className="text-muted-foreground">
-              Jeg har en kandidatgrad i Specialpædagogik og har omfattende træning i autismespektrumforstyrrelser, ADHD, sensorisk processing og børneudvikling. Min tilgang kombinerer evidensbaserede strategier med bibelske principper for at hjælpe dit samfund med virkelig at blive et sted, hvor alle børn hører til.
+                Jeg tror på at alle børn har noget særligt at bidrage med. Når vi lærer at se bag adfærden og forstår, hvad der ligger bag, bliver arbejdet både lettere og langt mere meningsfuldt, for både børnene og os voksne.
             </p>
-            <div className="pt-4 space-y-2">
+            <div className="pt-4 space-y-4">
               {[
-                'Uddannet 150+ kirker og kristne skoler',
-                'Forfatter til "Alle Er Velkomne: Skabelse af Neurodiverse-Venlige Kirker"',
-                'Fremhævet i førende kristne publikationer'
+                'Førende ekspert med 25 års erfaring i inklusion af børn med særlige behov i kirkeligt regi',
+                'Forfatter til bogen “Børn med særlige behov”, brugt i kirker landet over',
+                'Kirke-Danmarks foretrukne underviser i inklusion af børn med særlige behov (træner bl.a. Mosaik, DanskOase og Apostolsk)'
               ].map((text) => (
-                <div key={text} className="flex items-center gap-3">
-                  <span className="text-primary">✓</span>
+                <div key={text} className="flex items-center gap-4">
+                    <span className="
+                        flex 
+                        items-center 
+                        justify-center 
+                        w-8 
+                        h-8 
+                        bg-secondary 
+                        text-primary 
+                        rounded-blob
+                        flex-shrink-0
+                        ">
+                        ✓
+                    </span>
                   <span>{text}</span>
                 </div>
               ))}

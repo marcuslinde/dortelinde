@@ -20,7 +20,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
         <div className="space-y-8">
           <div>
-            <h1>Privatlivspolitik</h1>
+            <h1 className="text-5xl font-heading font-bold tracking-tight mb-2">Privatlivspolitik</h1>
             <p className="text-muted-foreground mt-2">
               Sidst opdateret: {new Date().toLocaleDateString('da-DK', { month: 'long', day: 'numeric', year: 'numeric' })}
             </p>
@@ -28,7 +28,7 @@ export function Privacy({ onBack }: PrivacyProps) {
 
           <div className="space-y-6">
             <section>
-              <h2>Hvilke Data Vi Indsamler</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Hvilke Data Vi Indsamler</h2>
               <p className="text-muted-foreground mt-2">
                 Når du bruger vores tilbudsanmodningsformular, indsamler vi følgende oplysninger:
               </p>
@@ -41,7 +41,7 @@ export function Privacy({ onBack }: PrivacyProps) {
             </section>
 
             <section>
-              <h2>Hvordan Vi Indsamler Dine Data</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Hvordan Vi Indsamler Dine Data</h2>
               <p className="text-muted-foreground mt-2">
                 Vi indsamler data direkte fra dig, når du:
               </p>
@@ -53,7 +53,7 @@ export function Privacy({ onBack }: PrivacyProps) {
             </section>
 
             <section>
-              <h2>Hvordan Vi Bruger Dine Data</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Hvordan Vi Bruger Dine Data</h2>
               <p className="text-muted-foreground mt-2">
                 Vi bruger de oplysninger, du giver, til at:
               </p>
@@ -66,14 +66,14 @@ export function Privacy({ onBack }: PrivacyProps) {
             </section>
 
             <section>
-              <h2>Datasikkerhed</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Datasikkerhed</h2>
               <p className="text-muted-foreground mt-2">
                 Vi er forpligtede til at beskytte dine personlige oplysninger. Vi implementerer passende sikkerhedsforanstaltninger for at forhindre uautoriseret adgang, ændring, videregivelse eller ødelæggelse af dine data. Dog er ingen overførselsmetode over internettet 100% sikker.
               </p>
             </section>
 
             <section>
-              <h2>Deling af Data</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Deling af Data</h2>
               <p className="text-muted-foreground mt-2">
                 Vi sælger, handler eller udlejer ikke dine personlige oplysninger til tredjeparter. Vi kan kun dele dine oplysninger:
               </p>
@@ -85,7 +85,7 @@ export function Privacy({ onBack }: PrivacyProps) {
             </section>
 
             <section>
-              <h2>Dine Rettigheder</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Dine Rettigheder</h2>
               <p className="text-muted-foreground mt-2">
                 Du har ret til at:
               </p>
@@ -101,28 +101,28 @@ export function Privacy({ onBack }: PrivacyProps) {
             </section>
 
             <section>
-              <h2>Cookies og Sporing</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Cookies og Sporing</h2>
               <p className="text-muted-foreground mt-2">
                 Denne hjemmeside bruger i øjeblikket ikke cookies eller sporingsteknologier. Hvis dette ændrer sig i fremtiden, vil vi opdatere denne politik i overensstemmelse hermed.
               </p>
             </section>
 
             <section>
-              <h2>Børns Privatliv</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Børns Privatliv</h2>
               <p className="text-muted-foreground mt-2">
                 Vores tjenester er rettet mod voksne og organisationer. Vi indsamler ikke bevidst personlige oplysninger fra børn under 13 år. Hvis du tror, vi har indsamlet oplysninger fra et barn, kontakt os venligst øjeblikkeligt.
               </p>
             </section>
 
             <section>
-              <h2>Ændringer til Denne Politik</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Ændringer til Denne Politik</h2>
               <p className="text-muted-foreground mt-2">
                 Vi kan opdatere denne privatlivspolitik fra tid til anden. Vi vil underrette dig om eventuelle ændringer ved at offentliggøre den nye politik på denne side og opdatere "Sidst opdateret" datoen.
               </p>
             </section>
 
             <section>
-              <h2>Kontakt Os</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tight mb-2">Kontakt Os</h2>
               <p className="text-muted-foreground mt-2">
                 Hvis du har spørgsmål om denne Privatlivspolitik, kontakt os venligst:
               </p>

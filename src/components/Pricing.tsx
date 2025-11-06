@@ -2,48 +2,44 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/
 import { Button } from "./ui/button";
 import { Check } from "lucide-react";
 
+// --- OPDATERET DATA BASERET PÅ OPRINDELIG TEKST ---
 const pricingTiers = [
   {
-    name: "Enkelt Session",
-    price: "10.000 kr",
-    description: "Perfekt til at introducere dit samfund til neurodiversitet",
+    name: "Oplæg & Foredrag",
+    price: "3.000 kr",
+    description: "Et praksisnært oplæg, der giver en grundlæggende indsigt i børn med særlige behov.",
     features: [
-      "1-times hovedtale eller prædiken",
-      "Spørgsmål & svar session inkluderet",
-      "Digital ressourcepakke",
-      "Opfølgende konsultationsopkald",
-      "Virtuelle eller personlige muligheder"
+      "45-60 minutters foredrag",
+      "Intro til diagnoser og reaktionsmønstre",
+      "Gode råd og \"do's & don'ts\" i praksis",
+      "Intro til fidgets og roskabende tilgange",
+      "Huskekort (A5) til alle deltagere"
     ],
     popular: false
   },
   {
-    name: "Workshop Dag",
-    price: "24.000 kr",
-    description: "Omfattende træning for din ledelse og frivillige",
+    name: "Hands-on Workshop",
+    price: "4.500 kr",
+    description: "Workshoppen kombinerer teori og praksis, hvor I selv får redskaberne i hænderne.",
     features: [
-      "Halv eller hel dags workshop",
-      "Interaktive træningssessioner",
-      "Skræddersyede materialer til dit ministerium",
-      "Vurderingsværktøjer & tjeklister",
-      "30-dages email support",
-      "Massebøger til nedsat pris",
-      "Gennemførelsescertifikat"
+      "2-timers interaktiv workshop",
+      "Undervisning om børnetyper og reaktioner",
+      "Kreativt værksted (lav egne fidgets)",
+      "Fælles samtale og sparring om jeres hverdag",
+      "Deltagerne går hjem med egne redskaber"
     ],
     popular: true
   },
   {
-    name: "Kirke Partnerskab",
-    price: "50.000+ kr",
-    description: "Langsigtet vejledning til omfattende inklusion",
+    name: "Træningsdag & Implementering",
+    price: "8.500 kr",
+    description: "Til jer, der har en specifik udfordring eller brug for langsigtet hjælp til en inkluderende kultur.",
     features: [
-      "Flere sessioner over 3-6 måneder",
-      "Tilpasset pensum udvikling",
-      "På-stedet ministeriel evaluering",
-      "Personale & frivillig træningsprogram",
-      "Forældrenes support workshops",
-      "Løbende konsultation & support",
-      "Årligt opfølgende besøg",
-      "Prioriteret planlægning"
+      "Alt fra 'Hands-on Workshop'-pakken",
+      "Udvidet 3.5-timers session (hel formiddag/aften)",
+      "1:1 sparring med ledere og nøglepersoner",
+      "Konkret implementeringsplan for jeres kirke",
+      "Opfølgnings-session (virtuel) efter 1 måned"
     ],
     popular: false
   }
@@ -56,21 +52,22 @@ export function Pricing() {
 
   return (
     <section id="pricing" className="py-20 px-6 bg-background overflow-hidden relative">
-      {/* Playful background blobs */}
-      <div className="absolute top-10 right-10 w-[500px] h-[500px] bg-accent rounded-blob-2 wobble opacity-60"></div>
-      <div className="absolute bottom-10 -left-32 w-[400px] h-[400px] bg-primary/20 rounded-blob float opacity-70"></div>
+      {/* Playful background blobs (uændret) */}
+      <div className="absolute top-10 right-10 w-[500px] h-[500px] bg-[#bce3e9] rounded-blob-2 animate-wobble opacity-60"></div>
+      <div className="absolute bottom-10 -left-32 w-[400px] h-[400px] bg-[#d7eff2]/80 rounded-blob animate-float opacity-70"></div>
       
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">
-          <h2>Tale & Træningspakker</h2>
+          <h2 className="text-4xl font-heading font-bold tracking-tight mb-2">Find jeres Format</h2>
+          {/* --- INTRO-TEKST FRA OPRINDELIG TEKST --- */}
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Hver kirkes rejse mod inklusion er unik. Vælg den pakke, der passer til dit samfunds behov og budget.
+            Her er de tre pakker, jeg tilbyder. Alle ydelser tilpasses selvfølgelig til jeres målgruppe og behov, uanset om det er i kirken, klubben eller spejderarbejdet.
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 items-start">
           {pricingTiers.map((tier) => (
-            <Card key={tier.name} className={`relative h-full hover:scale-105 transition-all duration-300 ${tier.popular ? 'border-primary border-2' : ''}`}>
+            <Card key={tier.name} className={`bg-white relative flex flex-col h-full hover:scale-105 transition-all duration-300 ${tier.popular ? 'border-primary border-2' : ''}`}>
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full">
                   Mest Populær
@@ -83,7 +80,7 @@ export function Pricing() {
                 </div>
                 <CardDescription>{tier.description}</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="flex flex-col flex-1 justify-between space-y-6">
                 <ul className="space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
@@ -94,10 +91,10 @@ export function Pricing() {
                 </ul>
                 <Button 
                   onClick={scrollToForm}
-                  className="w-full"
-                  variant={tier.popular ? "default" : "outline"}
+                  className="w-full mt-auto"
+                  variant={tier.popular ? "default" : "cards"}
                 >
-                  Anmod om Tilbud
+                  {tier.price === "Pris efter aftale" ? "Kontakt for tilbud" : "Anmod om Tilbud"}
                 </Button>
               </CardContent>
             </Card>
@@ -105,9 +102,21 @@ export function Pricing() {
         </div>
         
         <div className="mt-12 text-center">
+          {/* Del 1: Den almindelige disclaimer */}
           <p className="text-muted-foreground text-sm">
-            Alle pakker inkluderer rejse inden for 400 km. Tilpassede pakker tilgængelige for multi-kirke events eller denominationskonferencer.
+            Alle priser er ekskl. transport (kørsel tillægges efter statens gældende takst).<br />
+            Kirker og NGO’er får nedsat pris.
           </p>
+          
+          {/* Del 2: Den nye, synlige boks til variable ydelser */}
+            <div className="max-w-2xl mx-auto mt-10 pt-10 border-t border-muted">
+                <h3 className="text-lg font-semibold text-foreground">
+                    Leder du efter noget andet?
+                </h3>
+                <p className="text-muted-foreground mt-2">
+                    Jeg tilbyder også 1:1 sparring til specifikke udfordringer og længerevarende partnerskaber for kirkenetværk (som f.eks. Apostolsk Kirke). Kontakt mig for et uforpligtende tilbud.
+                </p>
+            </div>
         </div>
       </div>
     </section>
