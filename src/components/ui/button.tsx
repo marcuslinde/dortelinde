@@ -19,6 +19,9 @@ const buttonVariants = cva(
     
     cards:
       "bg-[#EAF7F9] text-accent-foreground hover:bg-[#d4ebef] transition-colors",
+
+    outline:
+      "border border-primary/30 bg-transparent hover:bg-primary/10 text-primary",
       
     /* Destructive (keep unchanged or adjust if you use it) */  
     destructive:

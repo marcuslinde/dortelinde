@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Heart, Users, Church } from "lucide-react";
 
 const topics = [
@@ -37,14 +37,13 @@ export function PresentationTopics() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {topics.map(({ Icon, title, description, duration, targetAudience }, index) => (
+          {topics.map(({ Icon, title, description, targetAudience }, index) => (
             <Card key={index} className="group hover:-translate-y-2 h-full hover:border-primary/30 transition-all duration-300 flex flex-col">
               <CardHeader>
                 <div className="w-14 h-14 rounded-blob-2 flex items-center justify-center mb-4 bg-[#EAF7F9] transition-all duration-300 group-hover:scale-110">
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
                 <CardTitle>{title}</CardTitle>
-                <CardDescription>{duration}</CardDescription>
               </CardHeader>
               
               <CardContent className="flex flex-col flex-1">

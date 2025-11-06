@@ -9,7 +9,7 @@ import { QuoteRequestForm } from "./components/QuoteRequestForm";
 import { Footer } from "./components/Footer";
 import { Privacy } from "./components/Privacy";
 import { Toaster } from "./components/ui/sonner";
-import { Testimonials } from "./components/Testimonials";
+//import { Testimonials } from "./components/Testimonials";
 
 export default function App() {
   const [showPrivacy, setShowPrivacy] = useState(false);

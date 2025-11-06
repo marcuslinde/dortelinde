@@ -1,7 +1,3 @@
-// VIGTIGT: Du skal fjerne 'Quote' fra denne importlinje
-import { Heart, Users, Church } from "lucide-react"; // (Eller hvor du nu importerer fra)
-
-// ... (LogoPlaceholder-komponenten er den samme)
 const LogoPlaceholder = ({ name }: { name: string }) => (
   <div className="flex items-center justify-center h-12 text-center text-muted-foreground/80 text-sm font-medium">
     {name}
