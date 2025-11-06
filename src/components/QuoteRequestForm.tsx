@@ -23,24 +23,38 @@ export function QuoteRequestForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    console.log("Form submitted:", formData);
-    toast.success("Tak for din henvendelse! Jeg vender tilbage hurtigst muligt.");
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      organization: "",
-      packageType: "",
-      eventDate: "",
-      attendees: "",
-      topic: "",
-      message: ""
-    });
-    setIsSubmitting(false);
+    // Send data til din Formspree URL
+    try {
+      const response = await fetch("https://formspree.io/f/xblpnzer", { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Tak for din henvendelse! Jeg vender tilbage hurtigst muligt.");
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          organization: "",
+          packageType: "",
+          eventDate: "",
+          attendees: "",
+          topic: "",
+          message: ""
+        });
+      } else {
+        toast.error("Hov, der skete en fejl. Prøv venligst igen.");
+      }
+    } catch (error) {
+      toast.error("Hov, der skete en netværksfejl. Tjek din forbindelse.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

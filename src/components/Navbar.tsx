@@ -19,7 +19,7 @@ export function Navbar() {
     } else {
       const element = document.getElementById(id);
       if (element) {
-        const offset = 70;
+        const offset = 70; 
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         window.scrollTo({ top: offsetPosition, behavior: "smooth" });
@@ -29,7 +29,7 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b-2 border-primary/20">
-      <div className="absolute top-0 right-1/4 w-32 h-full bg-accent/30 rounded-blob -z-10 blur-2xl"></div>
+      <div className="absolute top-0 right-1/4 w-32 h-full bg-[#D8B36C]/30 rounded-blob -z-10 blur-2xl"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14">
@@ -46,13 +46,13 @@ export function Navbar() {
               }}>
                 Dorte Linde
               </span>
-              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-blob scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent rounded-blob scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
             </span>
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -63,15 +63,9 @@ export function Navbar() {
                   letterSpacing: '0.01em'
                 }}
               >
-                <span className="relative z-10 transition-colors group-hover:text-primary">
+                <span className="relative z-10 transition-colors group-hover:text-accent">
                   {item.label}
                 </span>
-                {/* Playful blob hover background with slight variations */}
-                <div 
-                  className={`absolute inset-0 bg-accent/50 scale-0 group-hover:scale-100 transition-transform ${
-                    index % 2 === 0 ? 'rounded-blob' : 'rounded-blob-2'
-                  }`}
-                ></div>
               </button>
             ))}
             
@@ -90,7 +84,7 @@ export function Navbar() {
                 <Sparkles className="w-3.5 h-3.5" />
                 Anmod om Tilbud
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-white/20 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent transform -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-500 ease-in-out skew-x-[-20deg]"></div>
             </button>
           </div>
 
@@ -108,13 +102,11 @@ export function Navbar() {
         {isMenuOpen && (
           <div className="lg:hidden py-3 border-t border-primary/10 animate-in slide-in-from-top-2 duration-200">
             <div className="flex flex-col gap-1">
-              {navItems.map((item, index) => (
+              {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`px-4 py-2.5 text-left hover:bg-accent/50 transition-colors ${
-                    index % 3 === 0 ? 'rounded-blob' : index % 3 === 1 ? 'rounded-blob-2' : 'rounded-lg'
-                  }`}
+                  className="px-4 py-2.5 text-left hover:bg-accent/50 transition-colors rounded-lg"
                   style={{ 
                     fontFamily: 'Inter, sans-serif',
                     fontSize: '0.9375rem',
@@ -124,9 +116,10 @@ export function Navbar() {
                   {item.label}
                 </button>
               ))}
+              {/* --- RETTELSE: Mobil-knappen er nu konsistent med desktop --- */}
               <button
                 onClick={() => scrollToSection("quote-form")}
-                className="mt-2 px-4 py-2.5 bg-primary text-primary-foreground hover:bg-primary/90 transition-all flex items-center justify-center gap-2 rounded-md"
+                className="mt-2 px-4 py-2.5 bg-accent text-accent-foreground hover:bg-accent/90 transition-all flex items-center justify-center gap-2 rounded-md relative overflow-hidden group"
                 style={{
                   fontFamily: 'Inter, sans-serif',
                   fontSize: '0.9375rem',
@@ -134,8 +127,11 @@ export function Navbar() {
                   letterSpacing: '0.01em'
                 }}
               >
-                <Sparkles className="w-4 h-4" />
-                Anmod om Tilbud
+                <span className="relative z-10 flex items-center gap-1.5">
+                  <Sparkles className="w-4 h-4" />
+                  Anmod om Tilbud
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent transform -translate-x-[100%] group-hover:translate-x-[100%] transition-transform duration-500 ease-in-out skew-x-[-20deg]"></div>
               </button>
             </div>
           </div>

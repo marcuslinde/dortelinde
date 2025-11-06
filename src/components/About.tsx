@@ -5,7 +5,7 @@ const imageSrc = "/images/bogsalg.jpeg";
 
 export function About() {
   return (
-    <section className="py-20 px-6 bg-background relative overflow-hidden">
+    <section id="about" className="py-20 px-6 bg-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-[#D7EFF2]/60 rounded-blob -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-20 right-10 w-40 h-40 bg-[#D7EFF2]/60 rounded-blob-2 animate-float"></div>
