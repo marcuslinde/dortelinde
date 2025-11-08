@@ -12,7 +12,7 @@ Projektets formål var at bygge en moderne og responsiv hjemmeside fra bunden, b
 
 <br>
 
-## 🎨 Fra Udkast til Live Site
+## Fra Udkast til Live Site
 
 Processen involverede en signifikant refaktorering og justering af det oprindelige Figma-udkast for at forbedre brugerflow, rette designfejl og implementere autentisk indhold.
 
@@ -28,7 +28,7 @@ Processen involverede en signifikant refaktorering og justering af det oprindeli
 <img width="2782" height="1602" alt="Endelig version 2" src="https://github.com/user-attachments/assets/ab3b4586-5956-45a0-98f4-caebf9ee8d90" />
 
 <br>
----
+
 ## 🎯 Formål & Læringsmål
 
 Jeg valgte bevidst dette projekt for at styrke mine praktiske kompetencer inden for et moderne frontend-setup. Mine primære læringsmål var:
