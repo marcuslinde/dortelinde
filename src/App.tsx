@@ -31,7 +31,7 @@ export default function App() {
       <PresentationTopics />
       {/* <Testimonials /> */}
       <Pricing />
-      <Book imageUrl="https://images.unsplash.com/photo-1747210044397-9f2d19ccf096?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib29rJTIwcmVhZGluZyUyMGVkdWNhdGlvbnxlbnwxfHx8fDE3NTk3MzUzODZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" />
+      <Book />
       <QuoteRequestForm />
       <Footer onPrivacyClick={() => setShowPrivacy(true)} />
       <Toaster />

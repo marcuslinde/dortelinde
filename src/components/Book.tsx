@@ -2,11 +2,9 @@ import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { BookOpen, Newspaper } from "lucide-react";
 
-interface BookProps {
-  imageUrl: string;
-}
+const imageSrc = "/images/bogsalg.jpeg";
 
-export function Book({ imageUrl }: BookProps) {
+export function Book() {
   return (
     <section id="book" className="py-20 px-6 bg-secondary relative overflow-hidden">
       {/* Playful background shapes */}
@@ -82,7 +80,7 @@ export function Book({ imageUrl }: BookProps) {
           </div>
           <div className="order-1 md:order-2 tilt-1 hover:scale-105 transition-transform duration-500">
             <ImageWithFallback
-              src={imageUrl}
+              src={imageSrc}
               alt="Forside af bogen 'Børn med særlige behov – i kirkeligt børnearbejde'"
               className="w-full max-w-md mx-auto aspect-square object-cover rounded-blob"
             />
