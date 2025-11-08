@@ -7,7 +7,6 @@ Projektets formål var at bygge en moderne og responsiv hjemmeside fra bunden og
 - **Status:** Bygget og lanceret.
 - **Kunde:** Dorte Linde (min mor)
 
----
 
 ## 🎯 Formål & Læringsmål
 
@@ -17,7 +16,6 @@ Jeg valgte bevidst dette projekt for at styrke mine praktiske kompetencer inden 
 2.  **Kode-refaktorering:** Projektets fokus var *implementering* og *refaktorering*, ikke design fra bunden. Jeg har derfor arbejdet ud fra et Figma-udkast, som jeg efterfølgende har justeret, simplificeret og refaktoreret (især i `Navbar.tsx` og `Hero.tsx`) for at forbedre læsbarhed og vedligeholdelse.
 3.  **DevOps (Docker):** At opsætte en praktisk, **Docker-baseret review-pipeline** for at få mere erfaring med Docker og løse et reelt problem for en ikke-teknisk kunde.
 
----
 
 ## 🚀 Teknologi-stak
 
@@ -29,7 +27,6 @@ Jeg valgte bevidst dette projekt for at styrke mine praktiske kompetencer inden 
 * **Review-miljø:** Docker / Docker Hub (Containeriseret Vite Dev Server)
 * **Hosting (Prod):** Nordicway (cPanel/Apache)
 
----
 
 ## 🏃 Min Proces & Højdepunkter
 
