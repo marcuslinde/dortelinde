@@ -1,12 +1,14 @@
-# Landing Page Projekt: DorteLinde.dk
+# Landing Page Projekt: DorteLinde.dk (live)
 
 Dette repository indeholder koden til en "single-page" landing page, bygget til en specialist i inklusion af børn med særlige behov.
 
-Projektets formål var at bygge en moderne og responsiv hjemmeside fra bunden og håndtere hele processen fra udvikling til en fungerende "live" side.
+Projektets formål var at bygge en moderne og responsiv hjemmeside fra bunden, baseret på et designudkast fra Figma, og håndtere hele processen fra udvikling til en fungerende "live" side.
+Jeg valgte bevidst et Vite+React+typescript setup, da jeg ønskede mere eksponering til React. Derudover opsatte jeg også en review "pipeline" i Docker, for at få mere erfaring med det. Jeg var bevidst ikke fokuseret på at designe fra bunden, og fik derfor designudkastet generet fra figma, men havde stadig en stærk vision, så jeg tweakede udkastet en del, og rodede rundt i React Components.
 
 - **Status:** Bygget og lanceret.
 - **Kunde:** Dorte Linde (min mor)
 
+<br/>
 
 ## 🎯 Formål & Læringsmål
 
@@ -16,8 +18,9 @@ Jeg valgte bevidst dette projekt for at styrke mine praktiske kompetencer inden 
 2.  **Kode-refaktorering:** Projektets fokus var *implementering* og *refaktorering*, ikke design fra bunden. Jeg har derfor arbejdet ud fra et Figma-udkast, som jeg efterfølgende har justeret, simplificeret og refaktoreret (især i `Navbar.tsx` og `Hero.tsx`) for at forbedre læsbarhed og vedligeholdelse.
 3.  **DevOps (Docker):** At opsætte en praktisk, **Docker-baseret review-pipeline** for at få mere erfaring med Docker og løse et reelt problem for en ikke-teknisk kunde.
 
+<br/>
 
-## 🚀 Teknologi-stak
+## 🧑‍💻 Tech Stack
 
 * **Frontend:** React (med Vite)
 * **Sprog:** TypeScript
@@ -27,8 +30,9 @@ Jeg valgte bevidst dette projekt for at styrke mine praktiske kompetencer inden 
 * **Review-miljø:** Docker / Docker Hub (Containeriseret Vite Dev Server)
 * **Hosting (Prod):** Nordicway (cPanel/Apache)
 
+<br/>
 
-## 🏃 Min Proces & Højdepunkter
+## 🧭 Min Proces & Højdepunkter
 
 Min rolle i projektet dækkede hele processen:
 
